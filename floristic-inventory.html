@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Floristic Inventory</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light gray background */
+            color: #333;
+        }
+            .back-button {
+            background-color: #6b7280; /* Slightly lighter gray */
+            color: #fff;
+            padding: 0.5rem 0.75rem;
+            border-radius: 0.25rem;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.25rem;
+            transition: background-color 0.2s ease-in-out;
+        }
+        .back-button:hover {
+            background-color: #4a5568;
+        }
+        .no-gap {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .content-card {
+            background-color: #ffffff; /* White cards */
+            padding: 1.5rem;
+            border-radius: 0.75rem; /* Rounded corners */
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            margin-bottom: 1.5rem;
+        }
+        .image-caption-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        .thumbnail-link {
+            display: block;
+            width: 100%;
+            height: 100px; /* Fixed height for thumbnails */
+            overflow: hidden; /* Ensure image fits */
+            border-radius: 0.5rem;
+            border: 2px solid #e2e8f0;
+            transition: transform 0.2s ease-in-out, border-color 0.2s ease-in-out;
+        }
+        .thumbnail-link:hover {
+            transform: scale(1.05);
+            border-color: #4a5568;
+        }
+        .thumbnail-link img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .thumbnail-caption {
+            margin-top: 0.5rem;
+            font-size: 0.75rem; /* text-sm */
+            color: #6b7280; /* gray-500 */
+        }
+        .large-width-image {
+            display: block;
+            margin-top: 1.5rem;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 0; /* No space between image and caption */
+            max-width: 50%;
+            height: auto;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .plant-link {
+            color: #1a73e8; /* A nice blue for links */
+            text-decoration: none;
+        }
+        .plant-link:hover {
+            text-decoration: underline;
+        }
+        /* Custom style for the blockquote to enhance differentiation */
+        .quote-block {
+            background-color: #f8f8f8; /* Very light gray background */
+            border-left: 5px solid #6b7280; /* Darker border */
+            padding: 1.5rem; /* Increased padding */
+            border-radius: 0.75rem; /* Rounded corners for the block */
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+        /* New styling for the large image captions */
+        figcaption {
+            text-align: center;
+            font-size: 0.75rem;
+            color: #6b7280;
+            margin-top: 0.5rem;
+            margin-bottom: 2rem; /* Adds space between caption and next element */
+        }
+    </style>
+</head>
+<body class="antialiased">
+ <header class="bg-gray-800 text-white p-6 shadow-lg rounded-b-xl">
+        <div class="container mx-auto">
+            <div class="section-header">
+                <h1 class="text-3xl font-bold flex-grow text-center">Floristic Inventory of east-central Idaho</h1>
+            </div>
+        </div>
+    </header>
+
+    
+    <main class="container mx-auto px-4 py-3">
+        <div class="content-card mb-8">
+            <blockquote class="quote-block italic text-gray-700">
+                "A systematic survey to catalog all plant species and infraspecific taxa, and their distributions, within a defined geographic area.”
+            </blockquote>
+            <p class="no-gap text-gray-700">
+                <b>PROJECT OVERVIEW</b>
+            </p>
+            <p class="no-gap text-gray-700 mb-1">
+                My master’s thesis was more than a research project; it was a three-year immersion into the vast and rugged landscapes of east-central Idaho. Spanning approximately 27,000 square kilometers, the floristic inventory was my effort to document the remarkable plant diversity of the region. I surveyed portions of seven mountain ranges, exploring forests, rangelands, wetlands, and alpine summits. Each day in the field revealed species I'd never seen before.
+            </p>
+             <figure>
+                <a href="Flora_web1.jpg">
+                    <img src="Flora_web1.jpg" alt="Project area map" class="large-width-image">
+                </a>
+                <figcaption>Map of the project area.</figcaption>
+            </figure>
+           
+            <p class="text-gray-700 leading-relaxed mb-4">
+                The volume of specimens and geographic area of this project far surpasses that of typical botanical inventories. I finished the project with 1,349 unique taxa identified from 11,237 specimens. While surveying, I often reached a local high point that rewarded me with expansive views stretching out to each horizon – all of it my study area.
+            </p>
+            <p class="no-gap text-gray-700">
+                <b>FIELD METHODS</b>
+            </p>
+            <p class="no-gap text-gray-700 mb-1">
+                My summers were a frantic cycle: one or two days spent collecting specimens, followed by one or two days pressing them. Dr. Ron Hartman supplied me with a custom-built rack that could dry over 250 specimens in just a few days. Plants were not identified until after each summer, and this streamlined the process of collecting and pressing. Synthesizing findings from previous botanical records, aerial imagery, and a variety of geospatial data, I divided my effort across the study area to minimize ecological and spatial gaps. Individual surveys followed a hike route that optimized the number of different habitats traversed. Disturbed areas such as campgrounds, roadsides and abandoned fields were also surveyed for their potential to host novel, non-native species.
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                                          
+            </p>
+            <p class="text-gray-700 leading-relaxed mb-4">
+                The combination of broad scale and fine scale approaches enabled high species turnover (beta diversity) within surveys, and high species richness (gamma diversity) for the overall project. Although statistical analysis of species distributions or geospatial relationships was not a component of my thesis, I attempted to demonstrate the opportunity to do so by plotting survey sites both geographically and in environmental space (examples below).
+            </p>
+            <div class="grid grid-cols-3 gap-4 mt-6">
+                <div class="image-caption-item">
+                    <a href="Flora_web3.jpg" target="_blank" class="thumbnail-link">
+                        <img src="Flora_web3.jpg" alt="Thumbnail Graphic 1">
+                    </a>
+                    <span class="thumbnail-caption">Geographic distribution of survey sites. Limited access due wilderness designation necessitated the exclusion of surveys from much of the western portion of the study area.</span>
+                </div>
+                <div class="image-caption-item">
+                    <a href="Flora_web4.jpg" target="_blank" class="thumbnail-link">
+                        <img src="Flora_web4.jpg" alt="Thumbnail Graphic 2">
+                    </a>
+                    <span class="thumbnail-caption">Distribution of survey sites (red dots) and the project area (gray dots) plotted in mean annual precipitation (x axis) and mean annual temperature (Y axis).</span>
+                </div>
+                <div class="image-caption-item">
+                    <a href="Flora_web2.jpg" target="_blank" class="thumbnail-link">
+                        <img src="Flora_web2.jpg" alt="Thumbnail Graphic 3">
+                    </a>
+                    <span class="thumbnail-caption">The frequency histogram of species I collected is a reflection of both the methodology and of the frequency of species in the landscape.</span>
+                </div>
+            </div>
+            <p class="text-gray-700 leading-relaxed my-4">
+                Field work sharpened my botanical eye. Although I began the project with basic knowledge of local plant genera, my true growth was in learning to recognize subtle variations in plants and populations. I collected and pressed everything, from tiny annuals to pine trees, and from cacti to poison ivy. The various shapes and sizes of specimens were not conducive to being flattened onto a 29x41 cm herbarium sheet. With some ingenuity, I utilized various techniques to ensure plant materials were well preserved and demonstrated diagnostic features. For example, thick stems had to be sliced thin on one side, tree twigs shaved down on one side, and tall stems folded accordion style to fit on an herbarium sheet.
+            </p>
+            <p class="text-gray-700 leading-relaxed my-4">
+                The repetition of collecting every species in each new location was crucial. It wasn’t until I was back in the lab, keying out plants at the end of each summer, that I truly began to see the finer distinctions–discovering the subtle differences between cryptic and similar appearing taxa that had eluded me in the field. The process of discovery and pattern recognition became the foundation of my expertise, honed over three years of intense fieldwork.
+            </p>
+             <blockquote class="quote-block italic text-gray-700">
+                "Do not jump into your automobile next June and rush out…hoping to see some of that which I have attempted to evoke in these pages. In the first place you can't see anything from a car; you've got to get out of the [expletive] contraption and walk, better yet crawl, on hands and knees…When traces of blood begin to mark your trail you'll see something, maybe. Probably not.”
+                <footer class="mt-2 text-sm not-italic">
+                    - Edward Abbey in Desert Solitaire
+                </footer>
+            </blockquote>
+            <p class="text-gray-700 leading-relaxed my-4">
+                The project was a masterclass in travel to remote, unfamiliar locations. I relied on my personal vehicle, a low-clearance Honda Civic that was otherwise inappropriate for Idaho’s back roads. For many target locations, I had to weigh road conditions and vehicle capability against the extra time needed to walk along 4-wheel drive roads. Physical demands were also intense with most surveys taking me across dangerous scree slopes, up to a thousand meters of elevation gain, through lightning storms and close encounters with wildlife.
+            </p>
+            <p class="no-gap text-gray-700">
+                <b>A SPECIES NEW TO SCIENCE</b>
+            </p>
+            <p class="no-gap text-gray-700 mb-1">
+                I’m especially proud that I documented a previously undescribed species, <i>Polemonium elusum</i>, while completing my project. The species is unique in that it occupies a wide range of habitats but is confined to a small geographic area. While completing my thesis, Dr. Hartman and I collaborated with Rebecca Stubbs to describe the morphologic, geographic and evolutionary significance of the species. 
+            </p>
+            <p class="text-gray-700 leading-relaxed my-4">
+                You may find a digital photocopy of the species publication through open sources on the web or by the link below. Subsequent phylogenetic research has further clarified the relationship of <i>P.elusum</i> with sister species.
+            </p>
+            <a href="low_res_P.elusum.pdf" class="plant-link block mt-2">
+              <u>A new species from east-central Idaho</u>
+            </a>
+            <figure>
+                <a href="Flora_web17.JPG" target="_blank">
+                    <img src="Flora_web17.JPG" alt="Polemonium elusum" class="large-width-image">
+                </a>
+                <figcaption><i>Polemonium elusum</i> J.J.Irwin & R.L. Hartm.</figcaption>
+            </figure>
+            <p class="text-gray-700">
+                <b>INATURALIST</b>
+            </p>
+            <p class=""no-gap text-gray-700">
+                I took many photos of individual species while digging for specimens. I’ve since curated them into a georeferenced project available on iNaturalist:
+            </p>
+            <a href="https://www.inaturalist.org/projects/floristic-inventory-photographs" target="_blank" class="plant-link block mt-2">https://www.inaturalist.org/projects/floristic-inventory-photographs</a>
+            <p class="text-gray-700 mt-8 mb-0">
+                <b>EXTRAS</b>
+            </p>
+            <p class="no-gap text-gray-700 my-0">
+                Below is a small selection of additional photos showing aspects of my field work, and the remarkable landscapes of the project area:
+            </p>
+            <div class="grid grid-cols-3 gap-4 mt-6">
+                <div class="image-caption-item">
+                    <a href="Flora_web13.jpg" target="_blank" class="thumbnail-link">
+                        <img src="Flora_web13.jpg" alt="Thumbnail Graphic 5">
+                    </a>
+                    <span class="thumbnail-caption">One season of collections sorted into stacks according to family.</span>
+                </div>
+                <div class="image-caption-item">
+                    <a href="Flora_web9.jpg" target="_blank" class="thumbnail-link">
+                        <img src="Flora_web9.jpg" alt="Thumbnail Graphic 5">
+                    </a>
+                    <span class="thumbnail-caption">I took my "field vehicle" on roads it was not designed for.</span>
+                </div>
+                <div class="image-caption-item">
+                    <a href="Flora_web7.JPG" target="_blank" class="thumbnail-link">
+                        <img src="Flora_web7.JPG" alt="Thumbnail Graphic 6">
+                    </a>
+                    <span class="thumbnail-caption">Steep slopes and high relief characterized much of the project area. </span>
+                </div>
+                <div class="image-caption-item">
+                    <a href="Flora_web8.JPG" target="_blank" class="thumbnail-link">
+                        <img src="Flora_web8.JPG" alt="Thumbnail Graphic 7">
+                    </a>
+                    <span class="thumbnail-caption">One carefully planned collection trip involved a night hike and camping with no tent.</span>
+                </div>
+                <div class="image-caption-item">
+                    <a href="Flora_web6.jpg" target="_blank" class="thumbnail-link">
+                        <img src="Flora_web6.jpg" alt="Thumbnail Graphic 8">
+                    </a>
+                    <span class="thumbnail-caption">Eroding alpine ridges of the White Knob Mountains.</span>
+                </div>
+                <div class="image-caption-item">
+                    <a href="Flora_web11.jpg" target="_blank" class="thumbnail-link">
+                        <img src="Flora_web11.jpg" alt="Thumbnail Graphic 9">
+                    </a>
+                    <span class="thumbnail-caption">Iron Bog. Wetland sites such as this hosted high species richness and turnover.</span>
+                </div>
+                <div class="image-caption-item">
+                    <a href="Flora_web10.JPG" target="_blank" class="thumbnail-link">
+                        <img src="Flora_web10.JPG" alt="Thumbnail Graphic 10">
+                    </a>
+                    <span class="thumbnail-caption">Endemic and Great Basin disjunct species in desert shrublands made exploration here especially interesting!</span>
+                </div>
+                <div class="image-caption-item">
+                    <a href="Flora_web19.jpg" target="_blank" class="thumbnail-link">
+                        <img src="Flora_web19.jpg" alt="Thumbnail Graphic 11">
+                    </a>
+                    <span class="thumbnail-caption">Park-like forest understory and low/no fire frequency characterize the east and south half of the project area.</span>
+                </div>
+                <div class="image-caption-item">
+                    <a href="Flora_web14.JPG" target="_blank" class="thumbnail-link">
+                        <img src="Flora_web14.JPG" alt="Thumbnail Graphic 12">
+                    </a>
+                    <span class="thumbnail-caption">Remote field work requires self sufficiency and adaptability.</span>
+                </div>
+                <div class="image-caption-item">
+                    <a href="Flora_web21.jpg" target="_blank" class="thumbnail-link">
+                        <img src="Flora_web21.jpg" alt="Thumbnail Graphic 13">
+                    </a>
+                    <span class="thumbnail-caption">An earthquake fault scarp is visible below Idaho's tallest peak, Mount Borah 3847m.</span>
+                </div>
+                <div class="image-caption-item">
+                    <a href="Flora_web18.JPG" target="_blank" class="thumbnail-link">
+                        <img src="Flora_web18.JPG" alt="Thumbnail Graphic 5">
+                    </a>
+                    <span class="thumbnail-caption">The Salmon River at approximately 762m elevation, where it carves deeply through the mountains.</span>
+                </div>
+                <div class="image-caption-item">
+                    <a href="Flora_web20.JPG" target="_blank" class="thumbnail-link">
+                        <img src="Flora_web20.JPG" alt="Thumbnail Graphic 5">
+                    </a>
+                    <span class="thumbnail-caption">Blister rust killed whitebark pine stand. Will the juveniles survive to reproductive maturity?</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-6 mt-8 shadow-inner rounded-t-xl">
+        <div class="container mx-auto text-center text-sm">
+            <p>&copy; 2025 Jessica Irwin. All rights reserved.</p>
+            <p>Built with the aid of Gemini.</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
